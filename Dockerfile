@@ -9,4 +9,6 @@ ADD tsconfig.json tsconfig.json
 RUN npm install
 RUN ./node_modules/.bin/tsc -p .
 
+EXPOSE 8080
+
 ENTRYPOINT node bin/
