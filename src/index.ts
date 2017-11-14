@@ -9,7 +9,7 @@ let PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 app.all("/**",(req, res) => {
     console.log(`${instanceId}: received request from ${req.ip} to ${req.url}`);
-    res.write(`req.url:${req.url}\n`);
+    res.write(`(${instanceId}) req.url:${req.url}\n`);
     req.pipe(res);
 })
 
